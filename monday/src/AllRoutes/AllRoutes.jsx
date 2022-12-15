@@ -9,6 +9,7 @@ import Solution from '../Pages/Solution';
 import Platform from '../Pages/Platform';
 import Customers from '../Pages/Customers';
 import Resourse from '../Pages/Resourse';
+import Pricing from '../Pages/Pricing';
 
 
 const AllRoutes = () => {
@@ -31,6 +32,7 @@ const AllRoutes = () => {
                 <Route path='/platform' element={<Platform/>}></Route>
                 <Route path='/customers' element={<Customers/>}></Route>
                 <Route path='/Resourse' element={<Resourse/>}></Route>
+                <Route path='/pricing' element={<Pricing/>}></Route>
 
             </Routes>
         </div>

@@ -7,7 +7,7 @@ import { Image ,Box} from '@chakra-ui/react'
 export default function Nav() {
   return (
     <div>
-      <Box display={['none','flex']} justifyContent={'space-between'} border={'1px solid red'} height={'40px'} position={'fixed'} backgroundColor={'white'} width={'100%'} zIndex={3}>
+      <Box display={['none','flex']} justifyContent={'space-between'} border={'1px solid red'} height={'40px'} position={'relative'} backgroundColor={'white'} width={'100%'} zIndex={3}>
             <Box boxSize='' border='1px solid red' display={'flex'} justifyContent={'space-between'} width={'400px'}>
                 <Image src='https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/monday-logo-x2.png' alt='monday' width={'90px'} />
 
@@ -20,7 +20,7 @@ export default function Nav() {
             </Box>
 
             <Box border='1px solid red' display={'flex'} justifyContent={'space-between'} width={'200px'}>
-              <Link to="/login">Price</Link>
+              <Link to="/pricing">Price</Link>
               <Link to="/">Login</Link>
               <Link to="/login">Dark Mode</Link>
 
