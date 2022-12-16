@@ -34,26 +34,34 @@ export default function Home() {
         </div>
 
 
-        <div style={{display:'flex' ,justifyContent:'space-evenly', top :'130%' ,left:'20%',}}>
+        <div style={{display:'flex' ,justifyContent:'space-evenly', top :'130%' ,left:'20%',marginTop:'50px'}}>
           <div style={{width:'200px', border:'', boxShadow: '0px 20px 30px -10px',borderRadius:'3px'}}>
+            <div style={{marginLeft:'20px'}}>
 
             <img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/uploads/DanielleHassan/welcome-back/category-icon3.png" alt="calender"  style={{width:'60px'}}/>
             <p>Contact Sales</p>
             <p>Learn more</p>
+            </div>
 
           </div>
 
           <Box style={{width:'200px' ,boxShadow: '0px 20px 30px -10px'}} >
+          <div style={{marginLeft:'20px'}}>
+
             <img  src='https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/uploads/DanielleHassan/dev-minisite/Jira/boards%20Da/1.png'  alt='chatbox' width={'60px'} margin={'20px'}></img>
             <p>24/7 Support</p>
             <p>Learn more</p>
+          </div>
           </Box>
           
 
           <div style={{width:'200px',border:'' ,boxShadow: '0px 20px 30px -10px'}}>
+          <div style={{marginLeft:'20px'}}>
+
             <img  src='https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/uploads/DanielleHassan/welcome-back/pricing.png' alt='copy' width={'60px'}></img>
             <p margin='20px'>Pricing and Plans</p>
             <p>Learn more</p>
+          </div>
           </div>
         </div>
 

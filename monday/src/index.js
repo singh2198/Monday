@@ -4,12 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom"
+// import  pricing  from './Pages/Pricing';
+// import { contextPrice } from './Pages/Pricing';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+
+
+
   <BrowserRouter>
       <App />
   </BrowserRouter>
+
   
 );
 

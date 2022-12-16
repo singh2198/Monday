@@ -7,9 +7,12 @@ import Login from '../Pages/Login';
 import Nav from "../Component/Nav"
 import Solution from '../Pages/Solution';
 import Platform from '../Pages/Platform';
-import Customers from '../Pages/Customers';
+// import Customers from '../Pages/Customers';
+import Customer from '../Pages/Customer';
 import Resourse from '../Pages/Resourse';
 import Pricing from '../Pages/Pricing';
+import Payment from '../Pages/Payment';
+import Createaccount from '../Pages/Createaccount';
 
 
 const AllRoutes = () => {
@@ -30,9 +33,12 @@ const AllRoutes = () => {
 
                 <Route path='/solution' element={<Solution/>}></Route>
                 <Route path='/platform' element={<Platform/>}></Route>
-                <Route path='/customers' element={<Customers/>}></Route>
+                <Route path='/customers' element={<Customer/>}></Route>
                 <Route path='/Resourse' element={<Resourse/>}></Route>
                 <Route path='/pricing' element={<Pricing/>}></Route>
+                <Route path='/login' element={<Login/>}></Route>
+                <Route path='/createaccount' element={<Createaccount/>}></Route>
+                <Route path='/payment' element={<Payment/>}></Route>
 
             </Routes>
         </div>
