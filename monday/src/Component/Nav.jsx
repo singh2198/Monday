@@ -5,8 +5,11 @@ import { ReactNode } from 'react';
 import { Image ,Box} from '@chakra-ui/react'
 import Login from '../Pages/Login';
 import { useNavigate } from 'react-router-dom';
+import { LoginContext } from '../ContextApi/Context';
+import { useContext } from 'react';
 
 export default function Nav() {
+  const {auth}=useContext(LoginContext);
   const navigate=useNavigate()
   return (
     <div>
@@ -24,9 +27,9 @@ export default function Nav() {
 
             <Box border='' display={'flex'} justifyContent={'space-between'} width={'200px'}>
               <Link to="/pricing" style={{textDecoration:'none' ,padding:'5px' ,fontSize:'18px'}}>Price</Link>
-              <Link to="/login" style={{textDecoration:'none' ,padding:'5px' ,fontSize:'18px'}}>Login</Link>
+              <Link to="/login" style={{textDecoration:'none' ,padding:'5px' ,fontSize:'20px',width:'90px'}}>{auth ? "akash" :"User/login"}</Link>
               
-              <Link to="/login" style={{textDecoration:'none' ,padding:'5px' ,fontSize:'18px'}}>Dark Mode</Link>
+              {/* <Link to="/login" style={{textDecoration:'none' ,padding:'5px' ,fontSize:'18px'}}>Dark Mode</Link> */}
 
             </Box>
             

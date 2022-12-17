@@ -35,8 +35,6 @@ const reducer=(state,actions)=>{
 const Login = () => {
 
   const {auth,login}=useContext(LoginContext)
-  // console.log(auth)
-
   const [state,dispth] =useReducer(reducer,initial)
   const [details,setdetails]= useState([])
   const navigate=useNavigate()
@@ -80,15 +78,14 @@ const Login = () => {
     const handlesubmit =(el)=>{
         el.preventDefault()
       
-        console.log("helo")
+        // console.log("helo")
         for(var i=0;i<data.length;i++){
           
           if(state.email==data[i].email  && state.password==data[i].password){
             login()
-            // console.log(auth)
-            // setauth(true)
-            // setdfname(state.firstname)
-            // setdemail(state.email)
+            // setemail(state.email)
+            // setfname(state.firstname)
+            
             alert("You Login")
             navigate('/')
             return

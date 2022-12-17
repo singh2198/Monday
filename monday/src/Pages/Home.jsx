@@ -9,6 +9,7 @@ import { useContext } from 'react';
 
 export default function Home() {
   const {auth,logout}=useContext(LoginContext);
+  console.log(auth)
   // const {dfname,demail}=useContext(userdetailsContext)
   // console.log(dfname,demail)
   return (
@@ -22,7 +23,7 @@ export default function Home() {
 
             <div style={{top:'24%' ,position:'absolute' ,left:'46%'}}>
               {/* Logo img */}
-              <img src='https://dapulse-res.cloudinary.com/image/upload/welcome-back/Logo_monday.com.svg' width={'16%'} ></img>
+              <img src='https://dapulse-res.cloudinary.com/image/upload/welcome-back/Logo_monday.com.svg' width={'19%'} ></img>
             </div>
             {auth ? <div>
             <h1 style={{top:"30%", display:"inline" ,position:"absolute" ,color:"White" ,left:'40%'}}>Welcome Back </h1>  
@@ -30,7 +31,7 @@ export default function Home() {
 
             </div>:
             <div>
-              <h1 style={{top:"30%", display:"inline" ,position:"absolute" ,color:"White" ,left:'40%'}}>Make your Team for Project on Monday.com </h1>  
+              <h1 style={{top:"40%", display:"inline" ,position:"absolute" ,color:"White" ,left:'30%'}}>Make your Team for Project on Monday.com </h1>  
 
             </div> }
             
@@ -42,7 +43,7 @@ export default function Home() {
 
         <div style={{top:'90%',display:'inline-flex' ,position:'absolute' ,left:'32%',justifyContent:'space-between',border:'1px solid red',width:'40%'}}>
           <div>
-            <p style={{color:'white'}}>Akash | Email Addresh</p>
+            <p style={{color:'white'}}>{auth ? "Akash || 8755akash@gmail.com" :"account || email"}</p>
           </div>
           <button style={{margin:'10px'}} onClick={()=> logout()}>Logout</button>
         </div>

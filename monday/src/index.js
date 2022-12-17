@@ -5,8 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom"
 import ContextProvider from "./ContextApi/Context"
+import { ColorModeScript } from '@chakra-ui/react';
 // import Login from './Pages/Login';
 // import  LoginContext  from './ContextApi/Context';
+import theme from './Theme/Theme';
+import { ChakraProvider } from '@chakra-ui/react';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,7 +17,12 @@ root.render(
 
 <ContextProvider>
   <BrowserRouter>
+  {/* <ChakraProvider theme={theme}> */}
+  {/* <ColorModeScript initialColorMode={theme.config.initialColorMode}> */}
       <App />
+
+  {/* </ColorModeScript> */}
+  {/* </ChakraProvider> */}
   </BrowserRouter>
 </ContextProvider>
 
