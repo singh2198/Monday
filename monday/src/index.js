@@ -4,17 +4,19 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom"
-// import  pricing  from './Pages/Pricing';
-// import { contextPrice } from './Pages/Pricing';
+import ContextProvider from "./ContextApi/Context"
+// import Login from './Pages/Login';
+// import  LoginContext  from './ContextApi/Context';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-
-
+<ContextProvider>
   <BrowserRouter>
       <App />
   </BrowserRouter>
+</ContextProvider>
 
   
 );

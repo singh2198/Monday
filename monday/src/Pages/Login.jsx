@@ -1,8 +1,11 @@
 import React, { useReducer ,useState ,useEffect} from 'react';
-
+import { useContext } from 'react';
+import { LoginContext } from '../ContextApi/Context';
 import axios  from 'axios';
 import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
+
+// export const userdetailsContext=React.createContext()
 
 const initial={
   firstname:'',
@@ -31,9 +34,14 @@ const reducer=(state,actions)=>{
 
 const Login = () => {
 
+  const {auth,login}=useContext(LoginContext)
+  // console.log(auth)
+
   const [state,dispth] =useReducer(reducer,initial)
   const [details,setdetails]= useState([])
   const navigate=useNavigate()
+  // const [dfname,setdfname]=useState([])
+  // const [demail,setdemail]=useState([])
 
   const [data,setdata]=useState([])
   const getdata=()=>{
@@ -76,6 +84,11 @@ const Login = () => {
         for(var i=0;i<data.length;i++){
           
           if(state.email==data[i].email  && state.password==data[i].password){
+            login()
+            // console.log(auth)
+            // setauth(true)
+            // setdfname(state.firstname)
+            // setdemail(state.email)
             alert("You Login")
             navigate('/')
             return
@@ -97,6 +110,7 @@ const Login = () => {
 
   return (
     <div> 
+      {/* <userdetailsContext.Provider value={{dfname,demail}}>{children}</userdetailsContext.Provider> */}
       {/* <img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/monday-logo-x2.png" alt="" width={'15%'} margin='auto' left="43%"/> */}
       
       <img src="https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/monday-logo-x2.png" alt="" 

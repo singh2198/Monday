@@ -1,10 +1,16 @@
 
 import { Box } from '@chakra-ui/react'
 import React from 'react'
-import { FcCalendar, ReactIcons} from "react-icons/fc"
+// import { FcCalendar, ReactIcons} from "react-icons/fc"
+import { LoginContext } from '../ContextApi/Context'
+import { useContext } from 'react';
+// import  userdetailsContext  from './Login';
 
 
 export default function Home() {
+  const {auth,logout}=useContext(LoginContext);
+  // const {dfname,demail}=useContext(userdetailsContext)
+  // console.log(dfname,demail)
   return (
     <div>
         <div  style={{position:'relative'}}>
@@ -18,9 +24,17 @@ export default function Home() {
               {/* Logo img */}
               <img src='https://dapulse-res.cloudinary.com/image/upload/welcome-back/Logo_monday.com.svg' width={'16%'} ></img>
             </div>
+            {auth ? <div>
+            <h1 style={{top:"30%", display:"inline" ,position:"absolute" ,color:"White" ,left:'40%'}}>Welcome Back </h1>  
+             <h1 style={{top:"40%", display:"inline" ,position:"absolute" ,color:"White" ,left:'42%'}}>Akash Singh  </h1>  
 
-            <h1 style={{top:"30%", display:"inline" ,position:"absolute" ,color:"White" ,left:'40%'}}>Welcome Back </h1>
-            <h1 style={{top:"40%", display:"inline" ,position:"absolute" ,color:"White" ,left:'42%'}}>Akash Singh  </h1>
+            </div>:
+            <div>
+              <h1 style={{top:"30%", display:"inline" ,position:"absolute" ,color:"White" ,left:'40%'}}>Make your Team for Project on Monday.com </h1>  
+
+            </div> }
+            
+             
             <p style={{top:"64%", display:"inline" ,position:"absolute" ,color:"White" ,left:'42%'}}>Pick Up Where You Left Off </p>
 
         </div>
@@ -30,7 +44,7 @@ export default function Home() {
           <div>
             <p style={{color:'white'}}>Akash | Email Addresh</p>
           </div>
-          <button style={{margin:'10px'}}>Logout</button>
+          <button style={{margin:'10px'}} onClick={()=> logout()}>Logout</button>
         </div>
 
 
@@ -55,7 +69,7 @@ export default function Home() {
           </Box>
           
 
-          <div style={{width:'200px',border:'' ,boxShadow: '0px 20px 30px -10px'}}>
+          <div style={{width:'200px',border:'' ,boxShadow:'0px 20px 30px -10px'}}>
           <div style={{marginLeft:'20px'}}>
 
             <img  src='https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/uploads/DanielleHassan/welcome-back/pricing.png' alt='copy' width={'60px'}></img>
